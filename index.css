@@ -94,4 +94,54 @@
 
 #Populer .Populer-item .Populer-link .Populer-hover {
   width: 100%;
+  background-color: rgba(255, 255, 0, 0.7);
+}
+.Populer-modal .modal-dialog {
+  margin: 1rem;
+  max-width: 100vw;
+}
+.Populer-modal .modal-content {
+  text-align: center;
+  margin-top: 8rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .Populer-modal .modal-content {
+    margin-top: 4rem;
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+  }
+}
+.Populer-modal .modal-content h2,
+.Populer-modal .modal-content .h2 {
+  font-size: 3rem;
+  line-height: 3rem;
+}
+.PopulerPopuler-modal .modal-content p.item-intro {
+  font-style: italic;
+  margin-bottom: 2rem;
+  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.Populer-modal .modal-content p {
+  margin-bottom: 2rem;
+}
+.Populer-modal .modal-content ul.list-inline {
+  margin-bottom: 2rem;
+}
+.Populer-modal .modal-content img {
+  width: 10rem;
+  margin-bottom: 2rem;
+}
+.Populer-modal .close-modal {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  background-color: transparent;
+}
+.Populer-modal .close-modal:hover {
+  opacity: 0.3;
 }

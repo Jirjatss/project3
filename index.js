@@ -1,6 +1,7 @@
 let Movie = document.getElementById("movie");
 let Searchmovie = document.getElementById("Searchmovie");
 let tagline = document.getElementById("tagline");
+let modal = document.getElementById("modal");
 
 let page = parseInt(document.getElementById("pages").innerHTML);
 let pages = document.getElementById("pages");
@@ -22,7 +23,7 @@ fetch(`https://api.themoviedb.org/3/discover/movie?api_key=e6a61ee3362c62483dd7d
       Movie.innerHTML += `
     <div class="col-lg-3 col-sm-4 mb-3">
       <div class="Populer-item">
-        <a class="Populer-link" data-bs-toggle="modal" href=#sayur-${movie.id}>
+        <a class="Populer-link" data-bs-toggle="modal" href=#movie-${movie.id}>
         <div class="Populer-hover">
             <div class="Populer-hover-content"><i class="fas fa-plus fa-3x"></i></div>
           </div>
@@ -36,7 +37,28 @@ fetch(`https://api.themoviedb.org/3/discover/movie?api_key=e6a61ee3362c62483dd7d
       </div>
     </div>
     `;
-
+      modal.innerHTML += `
+      <div class="Populer-modal modal fade" id=movie-${movie.id} tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-bs-dismiss="modal"><b>Close</b></div>
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <div class="modal-body">
+                  <p class="item-intro text-muted"></p>
+                  <img class="img-fluid d-block mx-auto" src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt=${movie.title} />
+                  <h5>${movie.title}</h5>
+                  <p style="font-size: 1rem">Overview</p>
+                  <p style="font-size: 1rem; text-align : justify">${movie.overview}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      `;
       pages.innerHTML = `${page}`;
     })
   );
@@ -72,7 +94,7 @@ searchButton.addEventListener("click", (e) => {
           Movie.innerHTML += `
       <div class="col-lg-3 col-sm-4 mb-3">
         <div class="Populer-item">
-          <a class="Populer-link" data-bs-toggle="modal" href=#sayur-${movie.id}>
+          <a class="Populer-link" data-bs-toggle="modal" href=#movie-${movie.id}>
           <div class="Populer-hover">
               <div class="Populer-hover-content"><i class="fas fa-plus fa-3x"></i></div>
             </div>
@@ -86,6 +108,51 @@ searchButton.addEventListener("click", (e) => {
         </div>
       </div>
       `;
+          modal.innerHTML += `
+      <div class="Populer-modal modal fade" id=movie-${movie.id} tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-bs-dismiss="modal"><b>Close</b></div>
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <div class="modal-body">
+                  <p class="item-intro text-muted"></p>
+                  <img class="img-fluid d-block mx-auto" src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt=${movie.title} />
+                  <h5>${movie.title}</h5>
+                  <p style="font-size: 1rem">Overview</p>
+                  <p style="font-size: 1rem; text-align : justify">${movie.overview}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      `;
+          modal.innerHTML += `
+      <div class="Populer-modal modal fade" id=movie-${movie.id} tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-bs-dismiss="modal"><b>Close</b></div>
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <div class="modal-body">
+                  <p class="item-intro text-muted"></p>
+                  <img class="img-fluid d-block mx-auto" src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt=${movie.title} />
+                  <h5>${movie.title}</h5>
+                  <p style="font-size: 1rem">Overview</p>
+                  <p style="font-size: 1rem; text-align : justify">${movie.overview}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      `;
+
           if (page === 1) {
             document.getElementById("sebelumnya").disabled = true;
           } else {
@@ -110,7 +177,7 @@ next.addEventListener("click", (e) => {
         Movie.innerHTML += `
     <div class="col-lg-3 col-sm-4 mb-3">
       <div class="Populer-item">
-        <a class="Populer-link" data-bs-toggle="modal" href=#sayur-${movie.id}>
+        <a class="Populer-link" data-bs-toggle="modal" href=#movie-${movie.id}>
         <div class="Populer-hover">
             <div class="Populer-hover-content"><i class="fas fa-plus fa-3x"></i></div>
           </div>
@@ -124,6 +191,28 @@ next.addEventListener("click", (e) => {
       </div>
     </div>
     `;
+        modal.innerHTML += `
+      <div class="Populer-modal modal fade" id=movie-${movie.id} tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-bs-dismiss="modal"><b>Close</b></div>
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <div class="modal-body">
+                  <p class="item-intro text-muted"></p>
+                  <img class="img-fluid d-block mx-auto" src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt=${movie.title} />
+                  <h5>${movie.title}</h5>
+                  <p style="font-size: 1rem">Overview</p>
+                  <p style="font-size: 1rem; text-align : justify">${movie.overview}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      `;
         if (page === 1) {
           document.getElementById("previous").disabled = true;
         } else {
@@ -148,7 +237,7 @@ berikutnya.addEventListener("click", (e) => {
         Movie.innerHTML += `
     <div class="col-lg-3 col-sm-4 mb-3">
       <div class="Populer-item">
-        <a class="Populer-link" data-bs-toggle="modal" href=#sayur-${movie.id}>
+        <a class="Populer-link" data-bs-toggle="modal" href=#movie-${movie.id}>
         <div class="Populer-hover">
             <div class="Populer-hover-content"><i class="fas fa-plus fa-3x"></i></div>
           </div>
@@ -162,6 +251,28 @@ berikutnya.addEventListener("click", (e) => {
       </div>
     </div>
     `;
+        modal.innerHTML += `
+      <div class="Populer-modal modal fade" id=movie-${movie.id} tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-bs-dismiss="modal"><b>Close</b></div>
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <div class="modal-body">
+                  <p class="item-intro text-muted"></p>
+                  <img class="img-fluid d-block mx-auto" src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt=${movie.title} />
+                  <h5>${movie.title}</h5>
+                  <p style="font-size: 1rem">Overview</p>
+                  <p style="font-size: 1rem; text-align : justify">${movie.overview}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      `;
         if (page === 1) {
           document.getElementById("sebelumnya").disabled = true;
         } else {
@@ -183,7 +294,7 @@ previous.addEventListener("click", (e) => {
         Movie.innerHTML += `
     <div class="col-lg-3 col-sm-4 mb-3">
       <div class="Populer-item">
-        <a class="Populer-link" data-bs-toggle="modal" href=#sayur-${movie.id}>
+        <a class="Populer-link" data-bs-toggle="modal" href=#movie-${movie.id}>
         <div class="Populer-hover">
             <div class="Populer-hover-content"><i class="fas fa-plus fa-3x"></i></div>
           </div>
@@ -197,6 +308,29 @@ previous.addEventListener("click", (e) => {
       </div>
     </div>
     `;
+        modal.innerHTML += `
+      <div class="Populer-modal modal fade" id=movie-${movie.id} tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+         
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <div class="modal-body">
+                <div class="close-modal" data-bs-dismiss="modal"><b>Close</b></div>
+                  <p class="item-intro text-muted"></p>
+                  <img class="img-fluid d-block mx-auto" src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt=${movie.title} />
+                  <h5>${movie.title}</h5>
+                  <p style="font-size: 1rem">Overview</p>
+                  <p style="font-size: 1rem; text-align : justify">${movie.overview}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      `;
         if (page === 1) {
           document.getElementById("previous").disabled = true;
         } else {
@@ -221,7 +355,7 @@ sebelumnya.addEventListener("click", (e) => {
         Movie.innerHTML += `
     <div class="col-lg-3 col-sm-4 mb-3">
       <div class="Populer-item">
-        <a class="Populer-link" data-bs-toggle="modal" href=#sayur-${movie.id}>
+        <a class="Populer-link" data-bs-toggle="modal" href=#movie-${movie.id}>
         <div class="Populer-hover">
             <div class="Populer-hover-content"><i class="fas fa-plus fa-3x"></i></div>
           </div>
@@ -235,6 +369,28 @@ sebelumnya.addEventListener("click", (e) => {
       </div>
     </div>
     `;
+        modal.innerHTML += `
+      <div class="Populer-modal modal fade" id=movie-${movie.id} tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-bs-dismiss="modal"><b>Close</b></div>
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <div class="modal-body">
+                  <p class="item-intro text-muted"></p>
+                  <img class="img-fluid d-block mx-auto" src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt=${movie.title} />
+                  <h5>${movie.title}</h5>
+                  <p style="font-size: 1rem">Overview</p>
+                  <p style="font-size: 1rem; text-align : justify">${movie.overview}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      `;
         if (page === 1) {
           document.getElementById("sebelumnya").disabled = true;
         } else {
