@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sajad</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="vendor/bootstrap-5.0.2-dist/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Gloria+Hallelujah&family=Marck+Script&family=Sarabun:wght@100&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <section id="jumbotron" class="jumbotron jumbotron-fluid">
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">Movies</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"></button>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" style="color: whitesmoke; font-family: Sarabun, sans-serif; margin-right: 1rem; margin-left: 0.5rem">Search</span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search" />
+            <button class="btn btn-outline-light" type="submit" id="searchbutton">Search</button>
+          </form>
+        </div>
+      </nav>
+    </section>
+    <!-- Akhir Navbar -->
+    <!-- Movies -->
+    <section class="page-section bg-light" id="Populer">
+      <div class="container">
+        <div class="text-center">
+          <h1 id="tagline" class="section-heading">Populer Movies</h1>
+          <hr />
+        </div>
+        <div class="row" id="movie"></div>
+      </div>
+      <!-- Previous and Next Button -->
+      <div class="container-fluid" id="but">
+        <div class="row d-flex justify-content-center" style="text-align: center; padding-bottom: 3rem">
+          <div class="col-3">
+            <button type="button" class="btn btn-dark" id="previous">Previous</button>
+          </div>
+          <div class="col-2">
+            <button type="button" class="btn btn-dark" id="pages" min="1">1</button>
+          </div>
+          <div class="col-3">
+            <button type="button" class="btn btn-dark" id="next">Next</button>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid hide" id="buttons">
+        <div class="row d-flex justify-content-center" style="text-align: center; padding-bottom: 3rem">
+          <div class="col-3">
+            <button type="button" class="btn btn-dark" id="sebelumnya">Previous</button>
+          </div>
+          <div class="col-2">
+            <button type="button" class="btn btn-dark" id="pagess" min="1">1</button>
+          </div>
+          <div class="col-3">
+            <button type="button" class="btn btn-dark" id="berikutnya">Next</button>
+          </div>
+        </div>
+        ;
+      </div>
+      <!-- Akhir Previous and Next Button -->
+    </section>
+    <!-- AKhir Movies -->
+
+    <script src="vendor/bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
