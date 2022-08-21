@@ -10,13 +10,17 @@
   padding: 1rem;
   width: 90%;
 }
+.navbar-brand img {
+  width: 2rem;
+}
+
 .navbar a {
   font-family: "Sarabun", sans-serif;
-  font-size: 30px;
+  font-size: 1.5rem;
   color: whitesmoke;
 }
 .navbar a:hover {
-  color: black;
+  color: yellow;
 }
 
 #Populer .container {

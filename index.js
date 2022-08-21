@@ -54,6 +54,7 @@ searchButton.addEventListener("click", (e) => {
     Movie.innerHTML = ` 
     <h1 style="text-align : center; color: red"> Enter the title of the movie you are looking for!!! </h1>
     `;
+    pages.innerHTML = "1";
     document.getElementById("sebelumnya").disabled = true;
     document.getElementById("next").disabled = true;
     document.getElementById("previous").disabled = true;
